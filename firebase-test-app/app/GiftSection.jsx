@@ -41,16 +41,16 @@ const ParallaxCarousel = () => {
           (index + 1) * (ITEM_WIDTH + SPACING)
         ];
 
-        // Opposite parallax effect by reversing the image movement
+        
         const translateX = scrollX.interpolate({
           inputRange,
-          outputRange: [30, 0, -30],  // Opposite direction
+          outputRange: [30, 0, -30],  
           extrapolate: 'clamp'
         });
 
         const scale = scrollX.interpolate({
           inputRange,
-          outputRange: [0.9, 1, 0.9],  // Subtle scaling effect
+          outputRange: [0.9, 1, 0.9],
           extrapolate: 'clamp'
         });
 
@@ -61,7 +61,7 @@ const ParallaxCarousel = () => {
                 source={item.image}
                 style={[
                   styles.carouselImage, 
-                  { transform: [{ translateX }] }  // Apply opposite parallax effect
+                  { transform: [{ translateX }] }  
                 ]}
               />
               <View style={styles.borderContainer}>
@@ -116,14 +116,14 @@ const GiftSection = () => {
       shadowOffset: { width: 0, height: 5 },
       backgroundColor: '#fff',
       borderRadius: 10,
-      overflow: 'hidden',  // Prevent overflow
+      overflow: 'hidden',  
     },
     carouselItemContainer: {
-      overflow: 'hidden',  // Prevent any white space overflow
+      overflow: 'hidden',  
       borderRadius: 10,
     },
     carouselImage: {
-      width: ITEM_WIDTH + 30,  // Slightly larger for parallax but no overflow
+      width: ITEM_WIDTH + 30,  
       height: 250,
       resizeMode: 'cover',
     },

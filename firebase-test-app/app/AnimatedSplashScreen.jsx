@@ -29,14 +29,14 @@ export default function AnimationSplashScreen({ onFinish }) {
 
     const timer = setTimeout(() => {
       onFinish();
-    }, 3000); // Splash duration
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <LinearGradient
-      colors={["#d4fc79", "#96e6a1", "#c9ffd5"]} // Lighter gradient colors
+      colors={["#d4fc79", "#96e6a1", "#c9ffd5"]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={styles.container}
@@ -48,7 +48,6 @@ export default function AnimationSplashScreen({ onFinish }) {
         style={styles.animation}
       />
 
-      {/* Bouncing letters */}
       <View style={styles.textContainer}>
         {letters.map((letter, index) => (
           <Animated.Text

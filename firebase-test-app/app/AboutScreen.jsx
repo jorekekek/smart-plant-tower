@@ -9,7 +9,7 @@ export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Top Section with Image and Curved White Bottom */}
+        
         <View style={styles.topSection}>
           <Image 
             source={{ uri: 'https://images.unsplash.com/photo-1483794344563-d27a8d18014e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }} 
@@ -19,7 +19,6 @@ export default function AboutScreen() {
           <Text style={styles.aboutText}>About</Text>
         </View>
 
-        {/* About Content */}
         <View style={styles.content}>
           <Text style={styles.title}>Welcome to Our App</Text>
           <Text style={styles.paragraph}>
